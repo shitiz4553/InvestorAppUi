@@ -54,7 +54,13 @@ function EnterOtpScreen({ navigation }) {
             </TouchableOpacity>
           </View>
           <Space space={25} />
-          <FullButton color={Theme.lightBackgroundColor} label={"Verify"} />
+          <FullButton
+          handlePress={()=>navigation.navigate('VerificationScreen',{
+            title:'Congratulations!',
+            subtitle:'You are now verified! Click below to continue',
+            navTo:'DashboardScreen'
+          })}
+          color={Theme.lightBackgroundColor} label={"Verify"} />
         </ScrollView>
       </View>
     </View>
