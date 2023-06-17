@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import Theme from '../../src/Theme';
 
-const Typo = ({ children, xl, l, m, s, xs, fontFamily, style, ...props }) => {
+const Typo = ({ light,grey,children, xl, l, m, s, xs, fontFamily, style, ...props }) => {
   const getFontSizeStyle = () => {
     if (xl) return { fontSize: 24 };
     if (l) return { fontSize: 18 };
@@ -13,8 +13,8 @@ const Typo = ({ children, xl, l, m, s, xs, fontFamily, style, ...props }) => {
   };
 
   const fontStyles = {
-    fontFamily: Theme.SpaceBold || Theme.SpaceLight, // Replace 'YourDefaultFontFamily' with your default font family
-    color:Theme.textColor
+    fontFamily: light ? Theme.SpaceLight : Theme.SpaceBold,
+    color:grey ? 'grey' : Theme.textColor
   };
 
   // Merge the font size styles, font family, and provided styles

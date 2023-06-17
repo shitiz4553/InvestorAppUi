@@ -22,12 +22,14 @@ function Header({label,rightIcon,handleIconPress,noMargin,leftIcon}){
         ]}
       >
         <View style={styles.innerView}>
-        {leftIcon ? (
-            <TouchableOpacity onPress={handleIconPress}>
+         <View style={{flexDirection:'row',alignItems:'center'}}>
+         {leftIcon ? (
+            <TouchableOpacity  onPress={handleIconPress}>
               <Ionicons
                 name={leftIcon}
                 size={28}
                 color={"grey"}
+                style={{marginRight:15}}
               />
             </TouchableOpacity>
           ) : <View/>}
@@ -44,6 +46,7 @@ function Header({label,rightIcon,handleIconPress,noMargin,leftIcon}){
               {label}
             </Text>
           </View>
+         </View>
           {rightIcon ? (
             <TouchableOpacity onPress={handleIconPress}>
               <Ionicons

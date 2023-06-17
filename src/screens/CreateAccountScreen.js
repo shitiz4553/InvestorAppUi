@@ -25,8 +25,7 @@ function CreateAccountScreen({navigation}){
             <Typo style={styles.title}>Create {"\n"}your Account</Typo>
             <Space space={15} />
             <Typo m>
-              Let’s safe your transfer money our bank. Enter your details to
-              sign up.
+              Let’s safe your transfer money our bank. Enter your details to sign up.
             </Typo>
             <Space space={35} />
             <InputBox leftIcon={"user"} placeholder={"Full Name"} />

@@ -1,6 +1,6 @@
 export default {
     textColor:'#fff',
-    backgroundColor:'black',
+    backgroundColor:'#050505',
     lightBackgroundColor:'#333333',
     lightTextColor:'#BBBBBB',
     //fonts
