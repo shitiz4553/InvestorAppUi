@@ -33,6 +33,7 @@ function CreateAccountScreen({navigation}){
             <InputBox leftIcon={"mail"} placeholder={"Your email"} />
             <Space space={20} />
             <InputBox
+              error="Please enter the password that includes symbol" //sample
               secureTextEntry={true}
               leftIcon={"lock"}
               placeholder={"Password"}

@@ -12,6 +12,7 @@ import Typo from "../Typography/Typo";
 import LineBar from "../LineBar"
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import CheckItem from "../CheckItem";
 
 
 function FDCard(){
@@ -39,7 +40,7 @@ export default FDCard;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#141414",
+    backgroundColor: Theme.cardColor,
     padding: 20,
     borderRadius: 10,
     marginBottom:20
@@ -58,12 +59,3 @@ const styles = StyleSheet.create({
 });
 
 
-
-const CheckItem = ({text}) =>{
-    return(
-      <View style={{flexDirection:'row',flex:1,alignItems:'center',width:'90%',marginBottom:10}}>
-        <AntDesign style={{marginRight:7}} name="check" size={18} color="grey" />
-        <Typo s light>{text}</Typo>
-      </View>
-    )
-}

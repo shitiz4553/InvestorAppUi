@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   StyleSheet,
+  ScrollView,
 } from "react-native";
 import Theme from "../Theme";
 import Header from "../../components/Header";
@@ -16,7 +17,9 @@ function DrawerScreen({ navigation }) {
         leftIcon={"arrow-back"}
       />
       <View style={styles.body}>
+      <ScrollView>
         
+      </ScrollView>
       </View>
     </View>
   );

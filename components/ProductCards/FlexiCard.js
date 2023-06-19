@@ -40,7 +40,7 @@ export default FlexiCard;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#141414",
+    backgroundColor:Theme.cardColor,
     padding: 20,
     borderRadius: 10,
     marginBottom:20

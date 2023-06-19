@@ -14,6 +14,10 @@ import { Ionicons } from '@expo/vector-icons';
 import BannerView from "../../components/BannerView";
 import FDCard from "../../components/ProductCards/FDCard";
 import FlexiCard from "../../components/ProductCards/FlexiCard";
+import ClickableCard from "../../components/ProductCards/ClickableCard";
+import assets from "../../assets/assets";
+import InfoCard from "../../components/ProductCards/InfoCard";
+import CardInfoText from "../../components/ProductCards/CardInfoText";
 
 function DashboardScreen({ navigation }) {
 
@@ -36,15 +40,48 @@ function DashboardScreen({ navigation }) {
       <View style={styles.body}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <BannerView />
-          <Space space={25}/>
+          <Space space={25} />
           <View style={styles.wrapper}>
-          <Typo l>Investment Options</Typo>
-          <Space space={7}/>
-          <Typo m grey>Explore different investment options and pick the one that fit the best for you!</Typo>
-          <Space space={15}/>
-          <FDCard/>
-          <FlexiCard/>
+            <Typo l>Investment Options</Typo>
+            <Space space={7} />
+            <Typo m grey>
+              Explore different investment options and pick the one that fit the
+              best for you!
+            </Typo>
+            <Space space={15} />
+            <FDCard />
+            <FlexiCard />
+            <ClickableCard
+              //handlePress - use this to execute the action
+              img={assets.helpdesk}
+              title={"Any questions? Reach out"}
+              subtitle={
+                "Feel free to get in touch with our team related to all your questions!"
+              }
+            />
           </View>
+          <Space space={5} />
+          <InfoCard
+            img={assets.helpdesk}
+            title={"Any questions? Reach out"}
+            subtitle={
+              "Feel free to get in touch with our team related to all your questions!"
+            }
+          />
+          <Space space={15} />
+          <Typo l style={{ marginLeft: 20, marginBottom: 15 }}>
+            How it works?
+          </Typo>
+          <CardInfoText
+            title="Due diligence"
+            paragraph="Lorem ipsum this is a sample text that goes here you can easily change this and replace it with your origianl text."
+          />
+          <Space space={15} />
+          <CardInfoText
+            title="Partner Assessment"
+            paragraph="We allow so many things , Lorem ipsum this is a sample text that goes here you can easily change this and replace it with your origianl text."
+          />
+          <Space space={55} />
         </ScrollView>
       </View>
     </View>
